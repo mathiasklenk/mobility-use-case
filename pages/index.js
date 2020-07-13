@@ -1,34 +1,34 @@
-import React, { Fragment } from 'react';
-import Head from 'next/head';
-import Sticky from 'react-stickynode';
-import { ThemeProvider } from 'styled-components';
-import { cryptoTheme } from '../theme/crypto';
-import { ResetCSS } from '../assets/css/style';
-import { GlobalStyle, ContentWrapper } from '../containers/Crypto/crypto.style';
-import { DrawerProvider } from '../contexts/DrawerContext';
-import Navbar from '../containers/Crypto/Navbar';
-import Banner from '../containers/Crypto/BannerSection';
-import BannerSlider from '../containers/Crypto/BannerSlider';
-import Transactions from '../containers/Crypto/Transaction';
-import ControlSections from '../containers/Crypto/ControlSection';
-import TrustedProofSections from '../containers/Crypto/TrustedProof';
-import ScalableSections from '../containers/Crypto/ScalableSection';
-import SlideSections from '../containers/Crypto/CryptoSlides';
-import BetaSections from '../containers/Crypto/BetaSection';
-import Footer from '../containers/Crypto/Footer';
+import React, { Fragment } from "react";
+import Head from "next/head";
+import Sticky from "react-stickynode";
+import { ThemeProvider } from "styled-components";
+import { rideTheme } from "../theme/ride";
+import { ResetCSS } from "../assets/css/style";
+import { GlobalStyle, ContentWrapper } from "../containers/Ride/ride.style";
+import { DrawerProvider } from "../contexts/DrawerContext";
+import Navbar from "../containers/Ride/Navbar";
+import Banner from "../containers/Ride/Banner";
+import RideOption from "../containers/Ride/RideOption";
+import LocationSection from "../containers/Ride/LocationSelection";
+import FeatureSection from "../containers/Ride/Feature";
+import LatestNewsSection from "../containers/Ride/LatestNews";
+import HowItWorkSection from "../containers/Ride/HowItWorks";
+import TestimonialSection from "../containers/Ride/TestimonialSection";
+import FeatureSlider from "../containers/Ride/FeatureSlider";
+import Footer from "../containers/Ride/Footer";
 
 export default () => {
   return (
-    <ThemeProvider theme={cryptoTheme}>
+    <ThemeProvider theme={rideTheme}>
       <Fragment>
         <Head>
-          <title>Cryptocurrency | A react next landing page</title>
-          <meta name="Description" content="React next landing page" />
+          <title>Ride Sharing | A react next landing page</title>
           <meta name="theme-color" content="#ec5555" />
+          <meta name="Description" content="React next landing page" />
 
           {/* Load google fonts */}
           <link
-            href="https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700|Heebo:300,400,500,700"
+            href="https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700|Lato:300,400,700"
             rel="stylesheet"
           />
         </Head>
@@ -41,13 +41,13 @@ export default () => {
             </DrawerProvider>
           </Sticky>
           <Banner />
-          <BannerSlider />
-          <Transactions />
-          <ControlSections />
-          <TrustedProofSections />
-          <ScalableSections />
-          <SlideSections />
-          <BetaSections />
+          <RideOption />
+          <LocationSection />
+          <FeatureSlider />
+          <FeatureSection />
+          <LatestNewsSection />
+          <HowItWorkSection />
+          <TestimonialSection />
           <Footer />
         </ContentWrapper>
       </Fragment>
