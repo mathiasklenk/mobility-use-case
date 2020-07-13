@@ -41,7 +41,7 @@ const BannerSection = ({
                 iconPosition="left"
                 aria-label="email"
               />
-              <Link href="#fare_section">
+              <Link href="/signup">
                 <a>
                   <Button title="Get Started" {...button} />
                 </a>

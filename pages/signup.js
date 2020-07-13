@@ -26,7 +26,7 @@ const useStyles = makeStyles((theme) => ({
   },
   avatar: {
     margin: theme.spacing(1),
-    backgroundColor: theme.palette.secondary.main
+    backgroundColor: theme.palette.primary.main
   },
   form: {
     width: '100%', // Fix IE 11 issue.
@@ -36,10 +36,10 @@ const useStyles = makeStyles((theme) => ({
     margin: theme.spacing(3, 0, 2),
     height: '50px',
     color: 'white',
-    backgroundColor: '#ff5b60',
+    backgroundColor: '#8454FF',
     '&:hover': {
       //you want this to be the same as the backgroundColor above
-      backgroundColor: '#ff5b60'
+      backgroundColor: '#8454FF'
     }
   }
 }));
@@ -125,7 +125,7 @@ export default function SignUp() {
             >
               Create Account
             </Button>
-            <Grid container justify="flex-end">
+            <Grid container justify="center">
               <Grid item>
                 <Link href="/" variant="body2">
                   Back
