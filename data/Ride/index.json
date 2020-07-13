@@ -61,7 +61,7 @@
     },
     {
       "label": "Sign Up",
-      "path": "#",
+      "path": "/signup",
       "offset": "70"
     }
   ],
