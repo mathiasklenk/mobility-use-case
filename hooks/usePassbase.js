@@ -18,7 +18,7 @@ export function usePassbase(props) {
         PassbaseButton.default.renderButton(
           ref.current,
           onFinished,
-          "ebb8c2f2c2b27d10a1dfdf1bd0a882455b0f5cfcfd37f2a9020d24cfbe08feaa",
+          "2b4598cdbb809d8b7a34ba534d76447634ed9a8d58bb498421f72cd8187df048",
           {
             prefillAttributes: { email: prefilled?.email },
           },
