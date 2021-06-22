@@ -11,7 +11,7 @@ import Typography from "@material-ui/core/Typography";
 import { makeStyles } from "@material-ui/core/styles";
 import Container from "@material-ui/core/Container";
 import FooterWrapper from "../containers/Crypto/Footer/footer.style";
-import { usePassbase } from "../hooks/usePassbase";
+import dynamic from "next/dynamic";
 
 const useStyles = makeStyles((theme) => ({
   paper: {
@@ -41,18 +41,12 @@ const useStyles = makeStyles((theme) => ({
   },
 }));
 
+const PassbaseButton = dynamic(() => import("../components/PassbaseButton"), {
+  ssr: false,
+});
+
 export default function VerifyIdentity() {
   const classes = useStyles();
-
-  const handlePassbaseResult = (err, authKey) => {
-    if (!err) {
-      console.log(authKey);
-    }
-  };
-
-  const { ref: passbaseRef, invokePassabe } = usePassbase({
-    onFinished: handlePassbaseResult,
-  });
 
   return (
     <FooterWrapper id="footerSection">
@@ -70,7 +64,7 @@ export default function VerifyIdentity() {
             We need to verify that you have a valid driving license. Please
             complete the verification flow below to complete your signup.
           </Typography>
-          <div className={classes.pbButton} ref={passbaseRef} />
+          <PassbaseButton email="" />
 
           <form className={classes.form} noValidate>
             <Grid container spacing={2}></Grid>
